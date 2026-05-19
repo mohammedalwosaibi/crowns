@@ -1,8 +1,8 @@
 // app/lib/riot.js
 
 const apiKey = process.env.RIOT_API_KEY;
-export const stageStart = new Date('2026-05-20T00:00:00+03:00');
-export const stageEnd   = new Date('2026-05-26T23:59:59+03:00');
+export const stageStart = new Date('2026-05-13T00:00:00+03:00');
+export const stageEnd   = new Date('2026-05-19T23:59:59+03:00');
 const startTime = Math.floor(stageStart.getTime() / 1000);
 const endTime   = Math.floor(stageEnd.getTime()   / 1000);
 
