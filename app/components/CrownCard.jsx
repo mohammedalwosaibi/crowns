@@ -15,9 +15,10 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
   const accentBg     = isShame
     ? 'linear-gradient(180deg, #c23b22 0%, #9e2f1a 100%)'
     : 'linear-gradient(180deg, #c8963a 0%, #b07828 100%)';
-  const pillBg       = 'rgba(0,0,0,0.22)';
-  const pillBorder   = 'rgba(0,0,0,0.28)';
-  const pillText     = isShame ? '#ffd0c8' : '#3a2808';
+  const pillBg       = 'rgba(0,0,0,0.72)';
+  const pillBorder   = 'rgba(0,0,0,0.8)';
+  const pillText     = isShame ? '#ff9080' : '#f0d060';
+  const pillShadow   = isShame ? '0 0 6px rgba(255,100,80,0.6)' : '0 0 6px rgba(240,200,60,0.7)';
 
   return (
     <div
@@ -105,6 +106,7 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                             backgroundColor: pillBg,
                             color: pillText,
                             border: `1px solid ${pillBorder}`,
+                            textShadow: pillShadow,
                           }}
                           className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                         >
