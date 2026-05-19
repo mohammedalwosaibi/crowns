@@ -94,6 +94,25 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                       >
                         {player.displayName}
                       </span>
+                      {subStats && (
+                        <div className="flex gap-1 flex-shrink-0">
+                          {subStats.map(([label, val]) => (
+                            <span
+                              key={label}
+                              style={{
+                                fontFamily: 'var(--font-jetbrains-var)',
+                                backgroundColor: pillBg,
+                                color: pillText,
+                                border: `1px solid ${pillBorder}`,
+                                textShadow: pillShadow,
+                              }}
+                              className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
+                            >
+                              <span style={{ opacity: 0.65 }}>{label} </span>{val}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     <span
                       style={{ fontFamily: 'var(--font-jetbrains-var)', color: accentScore }}
@@ -117,25 +136,6 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                           className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                         >
                           {formatGameScore(val)}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  {subStats && (
-                    <div className="flex gap-1 mt-1 ml-6">
-                      {subStats.map(([label, val]) => (
-                        <span
-                          key={label}
-                          style={{
-                            fontFamily: 'var(--font-jetbrains-var)',
-                            backgroundColor: pillBg,
-                            color: pillText,
-                            border: `1px solid ${pillBorder}`,
-                            textShadow: pillShadow,
-                          }}
-                          className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
-                        >
-                          <span style={{ opacity: 0.65 }}>{label} </span>{val}
                         </span>
                       ))}
                     </div>
@@ -174,6 +174,24 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                     >
                       prov
                     </span>
+                    {subStats && (
+                      <div className="flex gap-1 flex-shrink-0">
+                        {subStats.map(([label, val]) => (
+                          <span
+                            key={label}
+                            style={{
+                              fontFamily: 'var(--font-jetbrains-var)',
+                              backgroundColor: 'rgba(40,36,28,0.8)',
+                              color: '#807868',
+                              border: '1px solid #484640',
+                            }}
+                            className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
+                          >
+                            <span style={{ opacity: 0.65 }}>{label} </span>{val}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <span
                     style={{ fontFamily: 'var(--font-jetbrains-var)', color: '#807868' }}
@@ -200,24 +218,6 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                     ))}
                   </div>
                 )}
-                {subStats && (
-                  <div className="flex gap-1 mt-1 ml-6">
-                    {subStats.map(([label, val]) => (
-                      <span
-                        key={label}
-                        style={{
-                          fontFamily: 'var(--font-jetbrains-var)',
-                          backgroundColor: 'rgba(40,36,28,0.8)',
-                          color: '#807868',
-                          border: '1px solid #484640',
-                        }}
-                        className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
-                      >
-                        <span style={{ opacity: 0.65 }}>{label} </span>{val}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </li>
             );
           }
@@ -239,6 +239,24 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                   >
                     {player.displayName}
                   </span>
+                  {subStats && (
+                    <div className="flex gap-1 flex-shrink-0">
+                      {subStats.map(([label, val]) => (
+                        <span
+                          key={label}
+                          style={{
+                            fontFamily: 'var(--font-jetbrains-var)',
+                            backgroundColor: 'rgba(100,80,30,0.25)',
+                            color: '#9a9070',
+                            border: '1px solid rgba(100,80,30,0.4)',
+                          }}
+                          className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
+                        >
+                          <span style={{ opacity: 0.65 }}>{label} </span>{val}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <span
                   style={{ fontFamily: 'var(--font-jetbrains-var)', color: '#a09880' }}
@@ -261,24 +279,6 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                       className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                     >
                       {formatGameScore(val)}
-                    </span>
-                  ))}
-                </div>
-              )}
-              {subStats && (
-                <div className="flex gap-1 mt-1 ml-6">
-                  {subStats.map(([label, val]) => (
-                    <span
-                      key={label}
-                      style={{
-                        fontFamily: 'var(--font-jetbrains-var)',
-                        backgroundColor: 'rgba(100,80,30,0.25)',
-                        color: '#9a9070',
-                        border: '1px solid rgba(100,80,30,0.4)',
-                      }}
-                      className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
-                    >
-                      <span style={{ opacity: 0.65 }}>{label} </span>{val}
                     </span>
                   ))}
                 </div>
