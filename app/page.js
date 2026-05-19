@@ -153,14 +153,14 @@ export default async function Dashboard() {
         {data.benchwarmers && data.benchwarmers.length > 0 && (
           <footer className="mt-6 text-center card-in" style={{ animationDelay: '1s' }}>
             <div className="flex items-center gap-4 mb-4">
-              <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, transparent, #2e2a1e)' }} />
+              <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, transparent, #7a6840)' }} />
               <span
-                style={{ fontFamily: 'var(--font-cinzel-var)', color: '#2e2a1e' }}
+                style={{ fontFamily: 'var(--font-cinzel-var)', color: '#a89060' }}
                 className="text-[9px] tracking-[0.4em] uppercase"
               >
-                AWOL — Zero Games
+                AFK — Zero Games
               </span>
-              <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, #2e2a1e, transparent)' }} />
+              <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, #7a6840, transparent)' }} />
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               {data.benchwarmers.map((player, i) => (
@@ -168,8 +168,8 @@ export default async function Dashboard() {
                   key={i}
                   style={{
                     fontFamily: 'var(--font-manrope-var)',
-                    color: '#3a3830',
-                    border: '1px solid #1e1c18',
+                    color: '#a09070',
+                    border: '1px solid #5a5040',
                     backgroundColor: '#0d1018',
                   }}
                   className="px-3 py-1 text-[11px] tracking-wide"
