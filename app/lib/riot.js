@@ -1,8 +1,19 @@
 // app/lib/riot.js
 
 const apiKey = process.env.RIOT_API_KEY;
-export const stageStart = new Date('2026-05-13T00:00:00+03:00');
-export const stageEnd   = new Date('2026-05-19T23:59:59+03:00');
+function getCurrentStage() {
+    const SAUDI_MS = 3 * 60 * 60 * 1000;
+    const WEEK_MS  = 7 * 24 * 60 * 60 * 1000;
+    const saudiNow = new Date(Date.now() + SAUDI_MS);
+    const daysSinceWed = (saudiNow.getUTCDay() + 4) % 7;
+    saudiNow.setUTCHours(0, 0, 0, 0);
+    saudiNow.setUTCDate(saudiNow.getUTCDate() - daysSinceWed);
+    const stageStart = new Date(saudiNow.getTime() - SAUDI_MS);
+    const stageEnd   = new Date(stageStart.getTime() + WEEK_MS - 1000);
+    return { stageStart, stageEnd };
+}
+
+export const { stageStart, stageEnd } = getCurrentStage();
 const startTime = Math.floor(stageStart.getTime() / 1000);
 const endTime   = Math.floor(stageEnd.getTime()   / 1000);
 
@@ -59,7 +70,6 @@ const getAllMatchData = async (uniqueMatchIds) => {
             const matchData = await getMatchData(matchId);
             allMatchData.push(matchData);
             
-            // THE FIX: Only sleep if it took time (meaning it actually hit Riot, not the cache)
             if (Date.now() - fetchStart > 50) {
                 await sleep(60); 
             }
@@ -123,7 +133,7 @@ const calculateCrowns = (playerStats) => {
         return {
             displayName: p.displayName,
             score: top5.reduce((a, b) => a + b, 0) / 5,
-            top5Games: top5, // <--- ADD THIS LINE BACK!
+            top5Games: top5,
             isQualified: p.totals.gamesPlayed >= MIN_GAMES
         };
     }).sort((a, b) => b.score - a.score);
@@ -154,7 +164,6 @@ const calculateCrowns = (playerStats) => {
     };
 };
 
-// 🌟 THE EXPORTED ENGINE 🌟
 export async function getLeaderboardData() {
     if (!apiKey) throw new Error("RIOT_API_KEY is missing from .env.local");
     const uniqueMatchIds = await getUniqueMatchIds();
