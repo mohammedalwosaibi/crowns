@@ -138,8 +138,16 @@ const calculateCrowns = (playerStats) => {
             healing: getBestOf5("healAndShieldingPerMin")
         },
         regulators: {
-            kda: activePlayers.map(p => ({ displayName: p.displayName, score: (p.totals.kills + p.totals.assists) / (p.totals.deaths || 1), isQualified: p.totals.gamesPlayed >= MIN_GAMES })).sort(sortProv),
-            winRate: activePlayers.map(p => ({ displayName: p.displayName, score: (p.totals.wins / p.totals.gamesPlayed) * 100, isQualified: p.totals.gamesPlayed >= MIN_GAMES })).sort(sortProv),
+            kda: activePlayers.map(p => ({
+                kills: p.totals.kills,
+                deaths: p.totals.deaths,
+                assists: p.totals.assists,
+                displayName: p.displayName, score: (p.totals.kills + p.totals.assists) / (p.totals.deaths || 1), isQualified: p.totals.gamesPlayed >= MIN_GAMES })).sort(sortProv),
+            winRate: activePlayers.map(p => ({
+                wins: p.totals.wins,
+                losses: p.totals.gamesPlayed - p.totals.wins,
+                gamesPlayed: p.totals.gamesPlayed,
+                displayName: p.displayName, score: (p.totals.wins / p.totals.gamesPlayed) * 100, isQualified: p.totals.gamesPlayed >= MIN_GAMES })).sort(sortProv),
             timeDead: activePlayers.map(p => ({ displayName: p.displayName, score: (p.totals.timeDead / p.totals.timePlayed) * 100, isQualified: p.totals.gamesPlayed >= MIN_GAMES })).sort((a, b) => (a.isQualified === b.isQualified) ? b.score - a.score : (a.isQualified ? -1 : 1))
         },
         benchwarmers: inactivePlayers
