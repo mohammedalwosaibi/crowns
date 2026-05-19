@@ -4,7 +4,7 @@
     stroke="#c89b3c"
     stroke-width="1.5"
     stroke-linejoin="round"
-    fill="#c89b3c"
+    fill="none"
   />
   <rect x="3" y="24.5" width="26" height="2.5" rx="0.5" fill="#c89b3c"/>
 </svg>
