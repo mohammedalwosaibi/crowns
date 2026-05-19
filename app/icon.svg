@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#010a13"/>
+  <polygon
+    points="3,26 3,14 10,19 16,5 22,19 29,14 29,26"
+    stroke="#c89b3c"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+    fill="rgba(200,155,60,0.15)"
+  />
+  <rect x="3" y="24.5" width="26" height="2.5" rx="0.5" fill="#c89b3c" opacity="0.55"/>
+</svg>
