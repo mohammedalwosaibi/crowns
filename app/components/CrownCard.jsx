@@ -16,8 +16,8 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
     : 'linear-gradient(180deg, #c8963a 0%, #b07828 100%)';
   const pillBg       = 'rgba(0,0,0,0.72)';
   const pillBorder   = 'rgba(0,0,0,0.8)';
-  const pillText     = isShame ? '#ff9080' : '#c0c0bc';
-  const pillShadow   = isShame ? '0 0 6px rgba(255,100,80,0.6)' : '0 0 4px rgba(180,180,180,0.25)';
+  const pillText     = isShame ? '#ff9080' : '#f0d060';
+  const pillShadow   = isShame ? '0 0 6px rgba(255,100,80,0.6)' : '0 0 6px rgba(240,200,60,0.7)';
 
   // Shared pill style builders
   const subPill = (bg, color, border) => ({
