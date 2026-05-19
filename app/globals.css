@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #05050a;
+  --color-surface: #0d0b14;
+  --color-border: #1c1a2c;
+  --color-border-bright: #2e2b46;
+  --color-gold: #c9a84c;
+  --color-gold-bright: #e0c368;
+  --color-crimson: #8b2424;
+  --color-crimson-bright: #c43030;
+  --color-text: #d0cceb;
+  --color-sub: #514d6a;
+  --color-faint: #252338;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #05050a;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 15% 80%, rgba(80, 60, 180, 0.035) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 85% 10%, rgba(201, 168, 76, 0.025) 0%, transparent 60%);
+  color: #d0cceb;
+  font-family: var(--font-manrope-var), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.18);
+  color: #e8d078;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.card-in {
+  animation: slideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.crown-shimmer {
+  background: linear-gradient(
+    105deg,
+    #c9a84c 0%,
+    #f0dc88 38%,
+    #fffbe8 50%,
+    #f0dc88 62%,
+    #c9a84c 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4.5s linear infinite;
+}
+
+.crown-card {
+  position: relative;
+  background-color: #0d0b14;
+  border: 1px solid #1c1a2c;
+  transition: border-color 0.3s ease;
+}
+
+.crown-card:hover {
+  border-color: #2e2b46;
+}
+
+.crown-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 6px;
+  right: 6px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  pointer-events: none;
+}
