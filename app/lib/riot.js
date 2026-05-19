@@ -16,7 +16,8 @@ const users = [
     { "displayName": "lil Omeny", "riotId": "lil Omeny#000", "puuid": "ei862XM35VEIYGsJQyhxtSRpRFxO2eI6uGZ3W63bFerx4N49RGOneD6XYe0JjCeh0oYcl9JBRtoy5A" },
     { "displayName": "Thug", "riotId": "Thug#00001", "puuid": "0jgd9VptbS_sbgdH_LWDXnFxCYxhOjiZOhlRvIgfdu4nIRCLrIlgLcYAqiOhTjTmQ9aO0Yqu8526CQ" },
     { "displayName": "Beeruッ", "riotId": "Beeruッ#000", "puuid": "qVKcwjhn-bX9KIEoyAhaRfb5F705wJQwEBH6msgGPvmbFGmuv_EB5DBkuXMwRiwLS0oWAK2gvPrJFg" },
-    { "displayName": "Madridi", "riotId": "Madridi#1993", "puuid": "xNIMUl7odqm_D5d9zJrABcswobvUHMPjk_l5S3yiyRCQjLZUqyoOSHX8w9N9wxGceDifEy12cbHqIA" }
+    { "displayName": "Madridi", "riotId": "Madridi#1993", "puuid": "xNIMUl7odqm_D5d9zJrABcswobvUHMPjk_l5S3yiyRCQjLZUqyoOSHX8w9N9wxGceDifEy12cbHqIA" },
+    { "displayName": "lil M7xy", "riotId": "lil M7xy#000", "puuid": "voCCeQmkCiVTr2OQfnFWtvpqz7u4ufGO9EAH8hmKSuF763AaH5W5o5CocpFJagLv-kisDi5ip2x9VA" }
 ];
 
 const puuidToDisplayName = {};
