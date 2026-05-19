@@ -16,8 +16,8 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
     : 'linear-gradient(180deg, #c8963a 0%, #b07828 100%)';
   const pillBg       = 'rgba(0,0,0,0.72)';
   const pillBorder   = 'rgba(0,0,0,0.8)';
-  const pillText     = isShame ? '#ff9080' : '#f0d060';
-  const pillShadow   = isShame ? '0 0 6px rgba(255,100,80,0.6)' : '0 0 6px rgba(240,200,60,0.7)';
+  const pillText     = isShame ? '#ff9080' : '#c0c0bc';
+  const pillShadow   = isShame ? '0 0 6px rgba(255,100,80,0.6)' : '0 0 4px rgba(180,180,180,0.25)';
 
   // Shared pill style builders
   const subPill = (bg, color, border) => ({
@@ -198,7 +198,7 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                         {subStats.map(([label, val]) => (
                           <span
                             key={label}
-                            style={subPill('rgba(55,44,14,0.65)', '#9a8030', 'rgba(100,78,22,0.45)')}
+                            style={subPill('rgba(30,30,30,0.65)', '#707070', 'rgba(80,80,80,0.4)')}
                             className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                           >
                             <span style={{ opacity: 0.6 }}>{label} </span>{val}
@@ -207,7 +207,7 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                       </div>
                     )}
                     <span
-                      style={scoreSty('#807868')}
+                      style={scoreSty('#727272')}
                       className="text-[10px] tabular-nums"
                     >
                       {displayScore}
@@ -221,9 +221,9 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                         key={i}
                         style={{
                           fontFamily: 'var(--font-jetbrains-var)',
-                          backgroundColor: 'rgba(45,36,12,0.7)',
-                          color: '#9a8030',
-                          border: '1px solid rgba(90,70,20,0.4)',
+                          backgroundColor: 'rgba(30,30,30,0.7)',
+                          color: '#707070',
+                          border: '1px solid rgba(80,80,80,0.4)',
                         }}
                         className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                       >
@@ -260,7 +260,7 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                       {subStats.map(([label, val]) => (
                         <span
                           key={label}
-                          style={subPill('rgba(80,62,18,0.6)', '#c8a840', 'rgba(140,108,32,0.5)')}
+                          style={subPill('rgba(45,45,45,0.6)', '#9a9a98', 'rgba(100,100,100,0.5)')}
                           className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                         >
                           <span style={{ opacity: 0.6 }}>{label} </span>{val}
@@ -269,7 +269,7 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                     </div>
                   )}
                   <span
-                    style={scoreSty('#a09880')}
+                    style={scoreSty('#9a9a98')}
                     className="text-[10px] tabular-nums"
                   >
                     {displayScore}
@@ -283,9 +283,9 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                       key={i}
                       style={{
                         fontFamily: 'var(--font-jetbrains-var)',
-                        backgroundColor: 'rgba(80,62,18,0.4)',
-                        color: '#c8a840',
-                        border: '1px solid rgba(130,100,30,0.45)',
+                        backgroundColor: 'rgba(45,45,45,0.4)',
+                        color: '#9a9a98',
+                        border: '1px solid rgba(100,100,100,0.45)',
                       }}
                       className="text-[7.5px] px-1 py-0.5 tabular-nums leading-none"
                     >
