@@ -84,7 +84,7 @@ export default function CrownCard({ title, desc, data, format, isShame = false, 
                       </span>
                       <span
                         style={{ fontFamily: 'var(--font-manrope-var)', color: accentBright }}
-                        className="font-semibold text-[11px] truncate"
+                        className="font-bold text-[11px] truncate"
                       >
                         {player.displayName}
                       </span>
